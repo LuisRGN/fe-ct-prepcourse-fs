@@ -9,11 +9,24 @@ function esPositivo(num) {
    // Si el número es 0, devuelve false.
    // Tu código:
 }
+function esPositivo(num) {
+   if (num > 1) {
+   return("Es positivo");
+}
+else if(num < 0){
+   return("Es negativo")
+}
+else (num = 0)
+   return(false)
+}
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+}
+function agregarSimboloExclamacion(str) {
+   return (str + "!")
 }
 
 function combinarNombres(nombre, apellido) {
@@ -21,16 +34,25 @@ function combinarNombres(nombre, apellido) {
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
 }
+function combinarNombres(nombre, apellido) {
+   return (nombre + " " + apellido)
+}
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
 }
+function obtenerSaludo(nombre) {
+   return ("Hola " + nombre + "!")
+}
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+}
+function obtenerAreaRectangulo(alto, ancho) {
+   return (alto * ancho)
 }
 
 function retornarPerimetro(lado) {
@@ -38,10 +60,16 @@ function retornarPerimetro(lado) {
    // Debes retornar su perímetro.
    // Tu código:
 }
+function retornarPerimetro(lado) {
+   return (lado * 4)
+}
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+}
+function areaDelTriangulo(base, altura) {
+   return (base * altura / 2)
 }
 
 function deEuroAdolar(euro) {
@@ -49,12 +77,25 @@ function deEuroAdolar(euro) {
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
 }
+function deEuroAdolar(euro) {
+   return (euro * 1.20) 
+}
 
 function esVocal(letra) {
    // Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”.
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
+}
+function esVocal(letra) {
+   if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+       return ("Es vocal")
+   }
+   else if (letra === "A" || letra === "E" || letra === "I" || letra === "O" || letra === "U") {
+       return ("Es vocal")
+   }
+   else 
+   return ("Dato incorrecto")
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
