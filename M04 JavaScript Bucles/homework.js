@@ -206,11 +206,11 @@ function tieneTresDigitos(num) {
 }
 function tieneTresDigitos(num) {
    if (num > -1000 && num < -99) 
-   console.log(true) 
+   return(true) 
   else if (num > 99 && num < 1000)
-  console.log(true)
+  return(true)
  else 
- console.log(false)
+ return(false)
  }
 
 function doWhile(num) {
@@ -226,7 +226,7 @@ function doWhile(num) {
    num = num + 5;
   }
   while (counter < 8)
-  console.log(num)
+  return(num)
  }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
