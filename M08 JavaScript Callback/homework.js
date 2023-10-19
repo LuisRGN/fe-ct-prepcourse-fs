@@ -6,12 +6,25 @@ function mayuscula(nombre) {
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
 }
+function mayuscula(nombre) {
+   return(nombre[0].toUpperCase()+nombre.slice(1))
+ }
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
 }
+function invocarCallback(cb){
+   return cb 
+}
+
+function callback(){
+ return true
+}
+
+var invocar = invocarCallback(callback)
+return(invocar)
 
 function operacionMatematica(num1, num2, cb) {
    // En este ejercicio recibirás dos números y un callback.
@@ -19,6 +32,16 @@ function operacionMatematica(num1, num2, cb) {
    // Retorna el resultado del callback pasándole como parámetros los números.
    // Tu código:
 }
+function operacionMatematica(num1, num2, cb){
+   return (cb (num1 + num2) )
+  }
+  
+  function callback(cb){
+   return 'tu suma es ' + cb
+  }
+ 
+  var suma = operacionMatematica(100,20,callback)
+  return(suma)
 
 function sumarArray(arrayOfNumbers, cb) {
    // Recibes un arreglo de números y un callback.
@@ -27,6 +50,19 @@ function sumarArray(arrayOfNumbers, cb) {
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
 }
+function sumarArray(arrayOfNumbers, cb){
+   arrayOfNumbers = [1,2,3,4,5]
+   var suma = 0
+   arrayOfNumbers.forEach(function(arrayOfNumbers){suma += arrayOfNumbers});
+   return cb(suma)
+ }
+ 
+ function callback(cb){
+  return 'tu arreglo suma ' + cb
+ }
+ 
+ var total = sumarArray('suma',callback)
+ return(total)
 
 function forEach(array, cb) {
    // Recibes un arreglo y un callback.
@@ -34,6 +70,18 @@ function forEach(array, cb) {
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
 }
+function forEach(array, cb){
+   array = [1,2,3,4,5]
+   array.forEach(function(num){cb(num = array)})
+   return cb(array)
+ }
+ 
+ function callback(cb){
+    return  cb
+ }
+ 
+ var muestra = forEach([],callback)
+ return(muestra)
 
 function map(array, cb) {
    // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
@@ -41,12 +89,40 @@ function map(array, cb) {
    // Retorna el nuevo arreglo.
    // Tu código:
 }
+function map(array, cb){
+   array = [1,2,3,4,5]
+   var multiplicar = array.map(num => {return num * num})
+   return(cb(multiplicar))
+  }
+  
+  function callback(cb){
+    return  cb
+  }
+  
+  var mapIncrementado = map([], callback)
+  return(mapIncrementado)
+  
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
 }
+function filter(arrayOfStrings){
+   var empiezaPorA = [
+   'abajo', 
+   'pera', 
+   'escalera', 
+   'alerta',
+   'indice',
+   'azteca',
+   'arbol',
+   'buzo',]
+   return empiezaPorA.filter(function (el) {
+     return el[0].toLowerCase().indexOf(arrayOfStrings.toLowerCase()) > -1;
+   });
+ }
+ return(filter('a'))
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
