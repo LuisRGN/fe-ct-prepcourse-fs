@@ -33,6 +33,17 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   var mayuscula = '';
+        var minuscula = '';
+        for (i = 0; i<string.length; i++){ 
+           if(string[i] === string[i].toUpperCase()){ 
+                mayuscula = mayuscula + string[i]; 
+             }
+         else {
+                minuscula = minuscula + string[i];
+              } 
+         }       
+        return (mayuscula + minuscula)
 }
 
 function asAmirror(frase) {
@@ -40,18 +51,30 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   let str = frase.split('').reverse().join('')
+   return str.split(' ').reverse().join(' ')
 }
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   var string = numero.toString();
+   var resultado = string.split('').reverse().join('')
+   if (resultado === string){
+     return 'Es capicua'
+   } else 
+   return 'No es capicua'
 }
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   var stringSinA = string.replace('a', '' );
+  var stringSinB = stringSinA.replace('b', '')
+  var stringSinC = stringSinB.replace('c', '')
+  return stringSinC
 }
 
 function sortArray(arrayOfStrings) {
@@ -60,6 +83,9 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   return arrayOfStrings.sort(function (a, b){
+      return (a.length - b.length)
+   });
 }
 
 function buscoInterseccion(array1, array2) {
@@ -69,6 +95,15 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   var array3 = [];
+   for (var i = 0; i < array1.length; i++){
+    for (var j = 0; j < array2.length; j++){
+        if(array1[i] === array2[j]){
+            array3.push(array1[i])
+        } 
+    }
+   }  
+   return array3
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
